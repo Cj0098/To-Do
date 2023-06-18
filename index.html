@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do List</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles/fonts.css">
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">کار های من</h1>
+    </header>
+    <section class="container">
+     <div>
+       <div class="form-container">
+        <form class="todo-form">
+          <input type="text" class="todo-input" placeholder=" فعالیت جدید" />
+          <div>
+            <label for="">دسته بندی :</label>
+               <select name="" class="grouping" >
+                 <option value="general"> عمومی</option>
+                <option value="work"> کار</option>
+                <option value="lesson"> درس</option>
+              </select>
+          </div>
+          <button type="submit" class="todo-button">
+            
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+        <div class="select">
+          <span>فیلتر:</span>
+          <select class="filter-todos" name='todos'>
+            <option value="all">همه</option>
+            <option value="completed">انجام شده</option>
+            <option value="uncompleted">ناتمام</option>
+          </select>
+        </div>  
+      </div>
+      <div class="form--error">عنوان فعالیت را درج کنید!</div>
+ </div>
+     <div class="todo-container">
+        <li class=" todo title__list"> <span><p>دسته بندی</p>عنوان</span><span>تاریخ ایجاد</span><span>سررسید </span></li>
+        <ul class="todolist">
+          <!-- <li class="todo">
+            <span class="todo__group" ><i class="fa-solid fa-briefcase"></i> کار</span> 
+            <p class="todo__title">کار 1</p>
+            <span class="todo__createdAt">1402/10/02</span>
+            <div class="todo__button">
+              <button class="todo__check "><i class=" fa-solid fa-circle-check"></i> </button>
+              <button class="todo__remove">  <i class= fa-solid fa-trash"></i> </button>
+              <button class="todo__edit"><i class="fa-solid fa-file-pen"></i></button>
+            </div>
+          </li> -->
+        </ul>
+        <div class="Message" >
+          <div class=" back" ></div>
+          <div class="Message__container">
+            <h4>با موفقیت اضافه شد</h4>
+            <span>
+              <i class="fa-regular fa-circle-check"></i>
+            </span>
+          </div>
+        </div>
+    </section>
+    <div class="form__edit">
+      <h5>ویرایش فعالیت</h5>
+      <form action="" >
+    <input type="text" class="edit-input" placeholder=" عنوان جدید"  data-todo-id="" />
+    <button type="submit" class="todo-button">
+              <i class="fa-solid fa-file-pen"></i>
+    </button>
+  </form>
+    </div>
+    <script src="./todoslist.js"></script>
+  </body>
+</html>

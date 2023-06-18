@@ -1,0 +1,287 @@
+@import url("./assets/styles/fonts.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "iranyekan";
+  list-style: none;
+}
+
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+}
+
+body{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--mainBlack);
+  width: 100%;
+  height: 100vh;
+  
+}
+
+
+.title{
+  margin-top: 2rem;
+}
+
+.form-container{
+  display: flex;
+  margin-top: 5rem;
+  align-items: center;
+
+}
+.todo-form{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+form{
+  border: 1px solid  var(--primaryColor) ;
+  border-radius: 10px;
+ overflow: hidden;
+  margin-left: 20px;
+}
+
+form input{
+   width: 15rem;
+  height: 2rem;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+}
+button{
+border: none;
+  font-size: 15px;
+  color: var(--primaryColor);
+  background-color: rgba(0, 0, 0, 0);
+}
+form button{
+ 
+  height: 100%;
+}
+
+form button i{
+  margin: 10px;
+}
+
+form button:hover{
+  background-color: var(--primaryColor);
+  color:var(--bodyColor);
+}
+
+
+
+
+.select{
+height: 2rem;
+border: 1px solid var(--primaryColor);
+border-radius:10px ;
+color: var(--mainBlack);
+overflow: hidden;
+padding: 5px;
+}
+.filter-todos{
+  border: none;
+  margin-left: 10px;
+  outline: none;
+}
+
+.todo-container{
+  margin-top: 2rem;
+}
+
+
+.todo{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid var(--primaryColor);
+  border-radius: 8px;
+  padding: 0.5rem;
+  justify-content: space-between;
+  
+}
+
+
+.todo span{
+  margin-right: 10px;
+}
+.todo__group i{
+  color: var(--primaryColor);
+}
+
+.todo__title,.todo__createdAt,.todo__button{
+  width: 30%;
+}
+.title__list span{
+  display: flex;
+  align-items: center;
+}
+.title__list p{
+  font-size: 10px;
+  margin-left: 20px;
+}
+.todo__createdAt{
+  margin-left: 40px;
+}
+
+.todo__button{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+.todo__button button{
+  margin-left: 10px;
+}
+
+
+.todo .todo__remove:hover{
+  color: var(--mainRed);
+}
+.todo .todo__check:hover{
+color: rgb(98, 216, 177);
+}
+
+.form--error{
+  color: var(--mainRed);
+  font-size: 10px;
+  margin-top: 10px;
+  margin-right: 20px;
+  display: none;
+}
+
+button >i{
+  pointer-events: none;
+}
+
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.completed__button {
+color: rgb(98, 216, 177);
+}
+
+.todo__edit:hover{
+  color:#b98a0a;
+}
+
+.todo__title{
+  overflow: hidden;
+}
+
+.Message .Message__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 120px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  transform:translateX(-50%) rotateY(90deg);
+}
+
+.Message .Message__container span{
+  color: rgb(98, 216, 177);
+  font-size: 40px;
+  margin-top: 10px;
+
+}
+
+.back  {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(252, 246, 246, 0.648);
+  display: none;
+  transition: all 0.5s;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  
+}
+
+.form__edit{
+ max-width: 400px;
+  height: 100px;
+ border:1px solid var(--primaryColor);
+ border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--mainWhite);
+ top: 50%;
+ left: 50%;
+ z-index: 2;
+transform:translateX(-50%) rotateY(90deg);
+transition: all 0.5s ease-in-out;
+}
+
+.form__edit form {
+  margin-right: 15px;
+}
+
+
+.form__edit h5{
+margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 767px){
+.form-container{
+  flex-direction: column;
+  align-items: flex-start;
+}
+  .select{
+    margin-top: 10px;
+  }
+
+    .todo {
+      font-size: 14px;
+    }
+
+
+.form__edit form{
+  margin-right: 15px;
+  
+}
+}
+
+.grouping{
+  border: none;
+  outline: none;
+  font-size: 10px;
+}
+
+.form-container div {font-size: 10px;}
+
+.todo__group{
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+
