@@ -1,6 +1,4 @@
-
 #To-Do
-
 
 
 every one gonna make a todo app in begining road of programming, i forgot to make it lol..
